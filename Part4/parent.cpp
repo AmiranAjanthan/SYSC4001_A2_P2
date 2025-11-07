@@ -28,8 +28,9 @@ int main() {
     }
 
     if (pid == 0) {
-        char *args[] = { (char*)"./bin/child", const_cast<char*>(std::to_string(shmid).c_str()), nullptr };
-        execv("./child", argv);
+        std::string shmid_str = std::to_string(shmid);
+        char* args[] = { (char*)"child", const_cast<char*>(shmid_str.c_str()), nullptr };
+        execv("./child", args);
         _exit(1);
     }
 
