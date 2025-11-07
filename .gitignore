@@ -1,0 +1,34 @@
+# Compiled executables
+*.exe
+*.out
+*.o
+*.obj
+*.so
+*.dylib
+*.dll
+
+# Build directories
+build/
+bin/
+obj/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# PDF files (assignment PDF - you may want to remove this if you want to include it)
+# Assign2-2025.pdf
+
+# Temporary files
+*.tmp
+*.log
+*.bak
+
