@@ -13,8 +13,8 @@ int main() {
     }
 
     if (pid == 0) {
-        char *const args[] = { (char*)"child", nullptr };
-        execv("./Part2/child", args);
+        char *const argv[] = { (char*)"child", nullptr };
+        execv("./child", argv);
         _exit(1);  
     }
 
