@@ -5,6 +5,7 @@
 #include <sys/shm.h>
 #include <sys/sem.h>
 #include <cstdio>
+#include <string>
 
 struct Shared { 
     int multiple; 
@@ -34,13 +35,13 @@ int main() {
         std::string semid_str = std::to_string(semid);
     
         char* args[] = {
-            (char*)"./Part5/child",                               
+            (char*)"child",                               
             const_cast<char*>(shmid_str.c_str()),               
             const_cast<char*>(semid_str.c_str()),                   
             nullptr                                                 
         };
     
-        execv(args[0], args);
+        execv("./child", args);
         _exit(1);  
     }
 
