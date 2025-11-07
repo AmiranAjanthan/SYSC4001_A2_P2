@@ -3,7 +3,8 @@
 #include <sys/types.h>  
 #include <sys/ipc.h>
 #include <sys/shm.h>
-#include <cstdio>       
+#include <cstdio>    
+#include <string>
 
 struct Shared {
      int multiple; 
